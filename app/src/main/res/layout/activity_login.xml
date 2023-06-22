@@ -17,7 +17,6 @@
         android:gravity="center"
         />
 
-
     <!-- center -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,28 +24,81 @@
         android:orientation="vertical"
         android:layout_marginTop="50dp">
 
-        <EditText
-            android:id="@+id/editTextUsername"
+        <!-- Top center -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username" />
+            android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/editTextPassword"
+            <EditText
+                android:id="@+id/editTextUsername"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Username"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="15dp"/>
+
+            <ImageView
+                android:id="@+id/error_image1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/uncorrect"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="15dp"/>
+
+        </LinearLayout>
+
+        <!-- Center center -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
-            android:inputType="textPassword" />
+            android:orientation="horizontal">
 
-        <CheckBox
-            android:id="@+id/checkBox"
-            android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="15dp"/>
+
+            <ImageView
+                android:id="@+id/error_image2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/uncorrect"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="15dp" />
+
+        </LinearLayout>
+
+        <!-- Bottom center -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Remember me" />
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp">
+
+            <TextView
+                android:id="@+id/error_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/design_default_color_error" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Remember me" />
+
+        </LinearLayout>
 
     </LinearLayout>
-
-
 
     <!-- bottom -->
     <LinearLayout
@@ -54,7 +106,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="50dp"
-        android:layout_marginLeft="150dp">
+        android:layout_marginLeft="155dp">
 
         <Button
             android:id="@+id/buttonLogin"
@@ -63,6 +115,5 @@
             android:text="Login" />
 
     </LinearLayout>
-
 
 </LinearLayout>
